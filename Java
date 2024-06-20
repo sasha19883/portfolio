@@ -1,0 +1,130 @@
+
+FactorialCalculator.
+
+import java.util.Scanner;
+
+
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.print("Введите число для вычисления факториала: ");
+
+        int value = new Scanner(System.in).nextInt();
+
+        
+        int factorial = 1;
+
+        // Проверка на отрицательное число
+
+        if (value < 0) {
+
+            System.out.println("Факториал не определен для отрицательных чисел.");
+
+        } 
+
+        // Вычисление факториала
+
+        else {
+
+            for (int i = 1; i <= value; i++) {
+
+                factorial *= i;
+
+            }
+
+            System.out.println(value + "! = " + factorial);
+
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ForCycle
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.print("Введите число для вычисления: ");
+
+        int value = new Scanner(System.in).nextInt();
+        for (int sum = 1; sum <= value; sum ++) {
+            for (int sum1 = 0; sum1 <= value; sum1 ++){
+                if (sum * sum1 == value) {
+                    System.out.println(sum + "*" + sum1);
+                }
+            }
+        }
+        
+    }
+}
+
+
+
+SwimmingPool
+
+public class Main {
+
+  public static void main(String[] args) { 
+    int volume = 1200; 
+    int fillingSpeed = 30; 
+    int devastationSpeed = 10; 
+    int result = 0; 
+    int minutes = 0; 
+    while (result < volume) { 
+      result += fillingSpeed - devastationSpeed; 
+      minutes += 1; 
+    } 
+    System.out.println(minutes + " минут"); 
+  } 
+}
+
+
+
+GuessTheNumber
+import java.util.*;
+import java.util.Random; 
+import java.util.Scanner; 
+
+public class Main {
+    public static void main(String[] args) {
+      int value = new Random().nextInt(100) + 1;  
+    System.out.println("Угадайте число от 1 до 100"); 
+
+ 
+    while (true) { 
+ 
+        int attempt = new Scanner( System.in ).nextInt(); 
+
+ 
+        if (attempt == value) { 
+ 
+            System.out.println("Вы угадали!"); 
+            break; 
+        } else if (attempt < value) { 
+ 
+            System.out.println("Загаданное число больше"); 
+        } else { 
+ 
+            System.out.println("Загаданное число меньше"); 
+        } 
+    } 
+    } 
+}  
